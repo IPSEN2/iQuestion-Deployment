@@ -18,9 +18,9 @@ Deze repository leent zich voor het uitrollen van de iQuestion applicatie.
 Je repository moet er dan zo uit zien:
 
 ```text
-iQuestion-Angular
-iQuestion-API
-mariadb
+iQuestion-Angular/
+iQuestion-API/
+mariadb/
 .gitignore
 docker-compose.yml
 README.md
