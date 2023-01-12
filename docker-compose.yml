@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  iquestion-angular:
+    build: ./iquestion-angular
+    ports:
+      - "80:80"
+  iquestion-api:
+    build: ./iquestion-api
+    ports:
+      - "8080:8080"
+  database:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: iquestion
+      MARIADB_USER: iquestion
+      MARIADB_PASSWORD: iquestion
+    volumes:
+     - ./mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
