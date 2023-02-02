@@ -34,10 +34,8 @@ cd iQuestion-Deployment
 ./deploy_windows.bat
 ```
 
-Voor Linux:
-
 ```Bash
-# Voor Linux
+# Voor Linux en MacOS
 chmod +x ./deploy_linux.sh
 ./deploy_linux.sh
 ```
