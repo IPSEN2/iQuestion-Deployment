@@ -5,8 +5,8 @@ echo In het .env.example bestand zie je welke gegevens je moet invullen.
 echo.
 pause
 cls
-git clone --branch docker https://github.com/IPSEN2/iQuestion-Angular
-git clone --branch docker https://github.com/IPSEN2/iQuestion-API
+git clone https://github.com/IPSEN2/iQuestion-Angular
+git clone https://github.com/IPSEN2/iQuestion-API
 docker-compose down
 docker-compose build
 docker-compose up -d
