@@ -32,3 +32,10 @@ cd iQuestion-Deployment
 ```Bash
 ./deploy_windows.bat
 ```
+
+Voor Linux:
+
+```Bash
+chmod +x ./deploy_linux.sh
+./deploy_linux.sh
+```
