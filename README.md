@@ -27,15 +27,17 @@ cd iQuestion-Deployment
 
 3. Kopieëer het bestand `.env.example` naar een nieuw bestand genaamd `.env` en vul het bestand in met je omgevingsvariablen
 
-4. Windows-gebruikers kunnen dan dit script runnen om de applicatie te deployen:
+4. Daarna kan je de applicatie deployen
 
 ```Bash
+# Voor Windows
 ./deploy_windows.bat
 ```
 
 Voor Linux:
 
 ```Bash
+# Voor Linux
 chmod +x ./deploy_linux.sh
 ./deploy_linux.sh
 ```
