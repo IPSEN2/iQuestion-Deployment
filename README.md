@@ -12,6 +12,7 @@ Windows gebruikers kunnen [Docker Desktop](https://docs.docker.com/desktop/insta
 
 ## Hoe te gebruiken?
 
+0. *Controleer altijd een script voor je deze uitvoert in de terminal!*
 1. Open  een **nieuwe** terminal (nadat je de benodigdheden hebt geïnstalleerd)
 2. Browse naar een folder waarin je de applicatie wilt zetten en clone deze repository:
 
@@ -37,5 +38,5 @@ cd iQuestion-Deployment
 ```Bash
 # Voor Linux en MacOS
 chmod +x ./deploy_linux.sh
-./deploy_linux.sh
+sudo ./deploy_linux.sh
 ```
