@@ -28,7 +28,11 @@ cd iQuestion-Deployment
 
 3. Kopieëer het bestand `.env.example` naar een nieuw bestand genaamd `.env` en vul het bestand in met je omgevingsvariablen
 
-4. Daarna kan je de applicatie deployen
+4. Pas de hostnaam aan in dit bestand:
+
+`iQuestion-Angular\src\environments\environment.prod.ts`
+
+5. Daarna kan je de applicatie deployen
 
 ```Bash
 # Voor Windows
