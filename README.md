@@ -13,15 +13,15 @@ Windows gebruikers kunnen [Docker Desktop](https://docs.docker.com/desktop/insta
 ## Hoe te gebruiken?
 
 1. Open  een **nieuwe** terminal (nadat je de benodigdheden hebt geïnstalleerd)
-2. Clone deze repository:
+2. Browse naar een folder waarin je de applicatie wilt zetten en clone deze repository:
 
-```shell
+```Bash
 git clone https://github.com/IPSEN2/iQuestion-Deployment
 ```
 
 3. Navigeer naar de nieuwe folder
 
-```shell
+```Bash
 cd iQuestion-Deployment
 ```
 
@@ -29,6 +29,6 @@ cd iQuestion-Deployment
 
 4. Windows-gebruikers kunnen dan dit script runnen om de applicatie te deployen:
 
-```shell
+```Bash
 ./deploy_windows.bat
 ```
