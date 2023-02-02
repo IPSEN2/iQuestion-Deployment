@@ -15,9 +15,20 @@ Windows gebruikers kunnen [Docker Desktop](https://docs.docker.com/desktop/insta
 1. Open  een **nieuwe** terminal (nadat je de benodigdheden hebt geïnstalleerd)
 2. Clone deze repository:
 
-`git clone https://github.com/IPSEN2/iQuestion-Deployment`
+```shell
+git clone https://github.com/IPSEN2/iQuestion-Deployment
+```
 
-3. Kopieëer .env.example naar .env en vul het bestand in
+3. Navigeer naar de nieuwe folder
+
+```shell
+cd iQuestion-Deployment
+```
+
+3. Kopieëer het bestand `.env.example` naar een nieuw bestand genaamd `.env` en vul het bestand in met je omgevingsvariablen
+
 4. Windows-gebruikers kunnen dan dit script runnen om de applicatie te deployen:
 
-`deploy_windows.bat`
+```shell
+./deploy_windows.bat
+```
