@@ -1,22 +1,49 @@
 version: "3.9"
 services:
   iquestion-angular:
-    build: ./iquestion-angular
+    build: ./iQuestion-Angular
     ports:
       - "80:80"
+    depends_on:
+      - iquestion-api
+    links:
+      - iquestion-api:iquestion-api
   iquestion-api:
-    build: ./iquestion-api
+    build: ./iQuestion-API
     ports:
       - "8080:8080"
-  database:
+    links:
+      - db:db
+    depends_on:
+      - db
+    environment:
+      # Gebruik het .env-bestand om de variabelen te definiëren
+      - spring_jpa_hibernate_ddl-auto=update
+      - spring_datasource_driver-class-name=org.mariadb.jdbc.Driver
+      - spring_jpa_open-in-view=false
+      - spring_output_ansi_enabled=always
+      - spring_mail_properties_mail_smtp_auth=true
+      - spring_mail_properties_mail_smtp_starttls_enable=true
+      - spring_datasource_url=jdbc:mariadb://db:3306/${DATABASE_NAME}
+      - spring_datasource_username=${DATABASE_USER}
+      - spring_datasource_password=${DATABASE_PASSWORD}
+      - spring_mail_host=${EMAIL_HOST}
+      - spring_mail_port=${EMAIL_PORT}
+      - spring_mail_username=${EMAIL_USERNAME}
+      - spring_mail_password=${EMAIL_PASSWORD}
+      - app_jwtSecret=${JWT_SECRET}
+      - app_rootEmail=${ROOT_USER_EMAIL}
+      - app_rootPassword=${ROOT_USER_PASSWORD}
+      - app_host=${HOST}
+      - spring_mvc_pathmatch_matching-strategy=ANT_PATH_MATCHER
+      - server_servlet_context-path=/api
+  db:
     image: mariadb
     restart: always
     environment:
-      MARIADB_ROOT_PASSWORD: root
-      MARIADB_DATABASE: iquestion
-      MARIADB_USER: iquestion
-      MARIADB_PASSWORD: iquestion
+      MARIADB_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${DATABASE_NAME}
+      MARIADB_USER: ${DATABASE_USER}
+      MARIADB_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
      - ./mariadb:/var/lib/mysql
-    ports:
-      - "3306:3306"

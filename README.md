@@ -4,25 +4,20 @@ Deze repository leent zich voor het uitrollen van de iQuestion applicatie.
 
 ## Benodigdheden
 
-* Beginners-kennis van Git en Docker Compose
+* [Git](https://git-scm.com/downloads)
+* [Docker](https://docs.docker.com/get-docker/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
-* Git en toegang tot de iQuestion repositories
+
+Windows gebruikers kunnen [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) downloaden, daar zit Docker Compose al ingebouwd.
 
 ## Hoe te gebruiken?
 
-1. Clone deze repository
-2. Clone de Angular en API repositories in deze repository
-3. Pas het `.env`-bestand aan met de juiste configuratie
-4. Voer in je terminal: `docker-compose up` en de applicaties zullen draaien
+1. Open  een **nieuwe** terminal (nadat je de benodigdheden hebt geïnstalleerd)
+2. Clone deze repository:
 
-Je repository moet er dan zo uit zien:
+`git clone https://github.com/IPSEN2/iQuestion-Deployment`
 
-```text
-iQuestion-Angular/
-iQuestion-API/
-mariadb/
-.gitignore
-docker-compose.yml
-README.md
-.env
-```
+3. Kopieëer .env.example naar .env en vul het bestand in
+4. Windows-gebruikers kunnen dan dit script runnen om de applicatie te deployen:
+
+`deploy_windows.bat`
